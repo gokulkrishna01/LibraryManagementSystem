@@ -16,11 +16,11 @@ $status=$_POST['status'];
 
 
 
-								
+
 mysql_query("insert into book (book_title,category_id,author,book_copies,book_pub,publisher_name,isbn,copyright_year,date_added,status)
  values('$book_title','$category_id','$author','$book_copies','$book_pub','$publisher_name','$isbn','$copyright_year',NOW(),'$status')")or die(mysql_error());
- 
- 
+
+
 header('location:books.php');
 }
-?>	
+?>

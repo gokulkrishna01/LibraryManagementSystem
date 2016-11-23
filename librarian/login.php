@@ -12,7 +12,7 @@
 	$_SESSION['id']=$row['user_id'];
 		}
 		else{ ?>
-	<div class="alert alert-danger">Access Denied</div>		
+	<div class="alert alert-danger">Access Denied</div>
 	<?php
 	}}
 	?>

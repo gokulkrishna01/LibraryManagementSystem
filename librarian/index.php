@@ -2,7 +2,7 @@
 <?php include('navbar.php'); ?>
     <div class="container">
 		<div class="margin-top">
-			<div class="row">	
+			<div class="row">
 			<div class="span12">
 					<div class="sti">
 						<img src="../LMS/E.B. Magalona.png" class="img-rounded">
@@ -29,7 +29,7 @@
 									<button id="login" name="submit" type="submit" class="btn"><i class="icon-signin icon-large"></i>&nbsp;Submit</button>
 								</div>
 								</div>
-								
+
 								<?php
 								if (isset($_POST['submit'])){
 								session_start();
@@ -44,14 +44,14 @@
 								$_SESSION['id']=$row['user_id'];
 									}
 									else{ ?>
-								<div class="alert alert-danger">Access Denied</div>		
+								<div class="alert alert-danger">Access Denied</div>
 								<?php
 								}}
 								?>
 						</form>
-				
+
 				</div>
-			</div>		
+			</div>
 			</div>
 		</div>
     </div>

@@ -12,7 +12,7 @@
 										header('location:dasboard.php');
 								$_SESSION['id']=$row['student_id'];
 									}
-									else{ 
+									else{
 								header('location:access_denied.php');
 								}}
 								?>

@@ -3,13 +3,13 @@
 <?php include('navbar_dashboard.php'); ?>
     <div class="container">
 		<div class="margin-top">
-			<div class="row">	
-			<div class="span12">		
-                       
+			<div class="row">
+			<div class="span12">
+
 				<?php include('slider.php'); ?>
-				
-				
-			</div>		
+
+
+			</div>
 			</div>
 		</div>
     </div>
