@@ -15,7 +15,7 @@
 					include('dropdown.php');
 					?>
 					<li><a href="books.php"><i class="icon-book icon-large"></i>&nbsp;Books</a></li>
-					<li><a href="member.php"><i class="icon-group icon-large"></i>&nbsp;Member</a></li>
+					<!--<li><a href="member.php"><i class="icon-group icon-large"></i>&nbsp;Member</a></li>-->
 					<li><a href="archive.php"><i class="icon-list-alt icon-large"></i>&nbsp;Archive</a></li>
 					<li><a href="#myModal" data-toggle="modal"><i class="icon-search icon-large"></i>&nbsp;Advance Search</a></li>
 					<!-- <li><a href="section.php"><i class="icon-group icon-large"></i>&nbsp;Sections</a></li> -->

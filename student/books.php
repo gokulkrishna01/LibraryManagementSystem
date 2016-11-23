@@ -14,10 +14,10 @@
 										<li   class="active"><a href="books.php">All</a></li>
 										<li><a href="new_books.php">New Books</a></li>
 										<li><a href="old_books.php">Old Books</a></li>
-										<li><a href="lost.php">Lost Books</a></li>
+										<!--<li><a href="lost.php">Lost Books</a></li>
 										<li><a href="damage.php">Damage Books</a></li>
 										<li><a href="sub_rep.php">Subject for Replacement</a></li>
-									</ul>
+									</ul>-->
 						<!--  -->
 						<center class="title">
 						<h1>Books List</h1>
@@ -26,7 +26,7 @@
 								<div class="pull-right">
 								<a href="" onclick="window.print()" class="btn btn-info"><i class="icon-print icon-large"></i> Print</a>
 								</div>
-								<p><a href="add_books.php" class="btn btn-success"><i class="icon-plus"></i>&nbsp;Add Books</a></p>
+								<!-- <p><a href="add_books.php" class="btn btn-success"><i class="icon-plus"></i>&nbsp;Add Books</a></p> -->
 
                                 <thead>
                                     <tr>
@@ -41,10 +41,10 @@
 										<th>Copyright Year</th>
 										<th>Date Added</th>
 										<th>Status</th>
-										<th class="action">Action</th>
+									<!--	<th class="action">Action</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody> -->
 
                                   <?php
 
@@ -82,12 +82,12 @@
 									 <td><?php echo $row['date_added']; ?></td>
 									 <td><?php echo $row['status']; ?></td>
 									<?php include('toolttip_edit_delete.php'); ?>
-                                    <td class="action">
+                                    <!--<td class="action">
                                         <a rel="tooltip"  title="Delete" id="<?php echo $id; ?>" href="#delete_book<?php echo $id; ?>" data-toggle="modal"    class="btn btn-danger"><i class="icon-trash icon-large"></i></a>
                                         <?php include('delete_book_modal.php'); ?>
 										<a  rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" href="edit_book.php<?php echo '?id='.$id; ?>" class="btn btn-success"><i class="icon-pencil icon-large"></i></a>
 
-                                    </td>
+                  </td>-->
 
                                     </tr>
 									<?php  }  ?>

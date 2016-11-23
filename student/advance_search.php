@@ -20,10 +20,10 @@ $author = $_POST['author'];
 										<li   class="active"><a href="books.php">All</a></li>
 										<li><a href="new_books.php">New Books</a></li>
 										<li><a href="old_books.php">Old Books</a></li>
-										<li><a href="lost.php">Lost Books</a></li>
+									<!--	<li><a href="lost.php">Lost Books</a></li>
 										<li><a href="damage.php">Damage Books</a></li>
 										<li><a href="sub_rep.php">Subject for Replacement</a></li>
-									</ul>
+									</ul> -->
 						<!--  -->
 						<center class="title">
 						<h1>Books List</h1>
