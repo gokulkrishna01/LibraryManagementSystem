@@ -17,11 +17,11 @@
 					</li>
 					<li class="divider-vertical"></li>
 					<li class="">
-					<a rel="tooltip"  data-placement="bottom" title="Click Here to About" id="login" href="librarian"><i class="icon-user icon-large"></i>&nbsp;Admin</a>
+					<a rel="tooltip"  data-placement="bottom" title="Click Here to login as Admin" id="login" href="librarian"><i class="icon-user icon-large"></i>&nbsp;Admin</a>
 					</li>
 					<li class="divider-vertical"></li>
           <li class="">
-					<a rel="tooltip"  data-placement="bottom" title="Click Here to About" id="login" href="librarian"><i class="icon-user icon-large"></i>&nbsp;Student</a>
+					<a rel="tooltip"  data-placement="bottom" title="Click Here to login as Student" id="login" href="librarian"><i class="icon-user icon-large"></i>&nbsp;Student</a>
 					</li>
 
 					<li class="divider-vertical"></li>
