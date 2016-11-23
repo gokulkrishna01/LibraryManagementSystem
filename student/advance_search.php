@@ -32,7 +32,7 @@ $author = $_POST['author'];
 								<div class="pull-right">
 								<a href="" onclick="window.print()" class="btn btn-info"><i class="icon-print icon-large"></i> Print</a>
 								</div>
-								<p><a href="add_books.php" class="btn btn-success"><i class="icon-plus"></i>&nbsp;Add Books</a></p>
+								<!-- <p><a href="add_books.php" class="btn btn-success"><i class="icon-plus"></i>&nbsp;Add Books</a></p> -->
 
                                 <thead>
                                     <tr>
