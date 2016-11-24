@@ -4,7 +4,7 @@
 								session_start();
 								$student_no = $_POST['student_no'];
 								$password = $_POST['password'];
-								$query = "SELECT * FROM students WHERE student_no='$student_no' AND password='$password' and status = 'active' ";
+								$query = "SELECT * FROM users WHERE username='$student_no' AND password='$password'";
 								$result = mysql_query($query)or die(mysql_error());
 								$num_row = mysql_num_rows($result);
 									$row=mysql_fetch_array($result);

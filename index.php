@@ -4,7 +4,6 @@
 		<div class="margin-top">
 			<div class="row">
 					<?php include('head.php'); ?>
-				<div class="span2">
 					<?php include('sidebar.php'); ?>
 				</div>
 				<div class="span10">

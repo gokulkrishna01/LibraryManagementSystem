@@ -1,30 +1,7 @@
--- phpMyAdmin SQL Dump
--- version 3.5.2.2
--- http://www.phpmyadmin.net
---
--- Host: 127.0.0.1
--- Generation Time: Mar 27, 2014 at 03:09 PM
--- Server version: 5.5.27
--- PHP Version: 5.4.7
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
---
--- Database: `eb_lms`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `book`
---
 
 CREATE TABLE IF NOT EXISTS `book` (
   `book_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -42,10 +19,6 @@ CREATE TABLE IF NOT EXISTS `book` (
   PRIMARY KEY (`book_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
 
---
--- Dumping data for table `book`
---
-
 INSERT INTO `book` (`book_title`, `category_id`, `author`, `book_copies`, `book_pub`, `publisher_name`, `isbn`, `copyright_year`, `date_receive`, `date_added`, `status`) VALUES
 ('Natural Resources', 8, 'Robin Kerrod', 10, 'Marshall Cavendish Corporation', 'Marshall', '1-85435-628-3', 1997, '', '2013-12-11 06:34:27', 'New'),
 ('Encyclopedia Americana', 5, 'Grolier', 20, 'Connecticut', 'Grolier Incorporation', '0-7172-0119-8', 1988, '', '2013-12-11 06:36:23', 'Archive'),
@@ -61,11 +34,6 @@ INSERT INTO `book` (`book_title`, `category_id`, `author`, `book_copies`, `book_
 ('English Expressways TextBook for 4th year', 9, 'Virginia Bermudez Ed. O. et al', 23, 'SD Publications, Inc.', 'Gregorio Araneta Avenue, Quezon City', '978-971-0315-33-8', 2007, '', '2013-12-11 07:01:25', 'New'),
 ('Asya Pag-usbong Ng Kabihasnan ', 8, 'Ricardo T. Jose, Ph . D.', 21, 'Vibal Publishing House Inc.', 'Araneta Avenue . Cor. Maria Clara St., Quezon City', '971-07-2324-3', 2008, '', '2013-12-11 07:02:56', 'New');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `borrow`
---
 
 CREATE TABLE IF NOT EXISTS `borrow` (
   `borrow_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -77,20 +45,12 @@ CREATE TABLE IF NOT EXISTS `borrow` (
   KEY `borrowid` (`borrow_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=485 ;
 
---
--- Dumping data for table `borrow`
---
 
 INSERT INTO `borrow` (`member_id`, `date_borrow`, `due_date`) VALUES
 (55, '2014-03-20 23:50:27', '21/03/2014'),
 (55, '2014-03-20 23:49:34', '21/03/2014'),
 (52, '2014-03-20 23:38:22', '03/01/2014');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `borrowdetails`
---
 
 CREATE TABLE IF NOT EXISTS `borrowdetails` (
   `borrow_details_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -101,20 +61,12 @@ CREATE TABLE IF NOT EXISTS `borrowdetails` (
   PRIMARY KEY (`borrow_details_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=165 ;
 
---
--- Dumping data for table `borrowdetails`
---
 
 INSERT INTO `borrowdetails` (`book_id`, `borrow_id`, `borrow_status`, `date_return`) VALUES
 (16, 400, 'pending', ''),
 (11, 401, 'pending', ''),
 (12, 402, 'returned', '2014-03-21 00:30:51');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `category`
---
 
 CREATE TABLE IF NOT EXISTS `category` (
   `category_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -124,9 +76,6 @@ CREATE TABLE IF NOT EXISTS `category` (
   KEY `classid` (`category_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=801 ;
 
---
--- Dumping data for table `category`
---
 
 INSERT INTO `category` (`classname`) VALUES
 ('Periodical'),
@@ -139,11 +88,7 @@ INSERT INTO `category` (`classname`) VALUES
 ('General'),
 ('References');
 
--- --------------------------------------------------------
 
---
--- Table structure for table `lost_book`
---
 
 CREATE TABLE IF NOT EXISTS `lost_book` (
   `Book_ID` int(11) NOT NULL AUTO_INCREMENT,
@@ -153,11 +98,7 @@ CREATE TABLE IF NOT EXISTS `lost_book` (
   PRIMARY KEY (`Book_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `member`
---
 
 CREATE TABLE IF NOT EXISTS `member` (
   `member_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -172,9 +113,6 @@ CREATE TABLE IF NOT EXISTS `member` (
   PRIMARY KEY (`member_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=66 ;
 
---
--- Dumping data for table `member`
---
 
 INSERT INTO `member` (`firstname`, `lastname`, `gender`, `address`, `contact`, `type`, `year_level`, `status`) VALUES
 ('Mark', 'Sanchez', 'Male', 'Talisay', '212010', 'Teacher', 'Faculty', 'Active'),
@@ -191,11 +129,7 @@ INSERT INTO `member` (`firstname`, `lastname`, `gender`, `address`, `contact`, `
 ('Chinie marie', 'Laborosa', 'Female', 'E.B. Magalona', '902101', 'Student', 'Second Year', 'Active'),
 ('Ruby', 'Morante', 'Female', 'E.B. Magalona', '', 'Teacher', 'Faculty', 'Active');
 
--- --------------------------------------------------------
 
---
--- Table structure for table `type`
---
 
 CREATE TABLE IF NOT EXISTS `type` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -205,9 +139,6 @@ CREATE TABLE IF NOT EXISTS `type` (
   KEY `id` (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=42 ;
 
---
--- Dumping data for table `type`
---
 
 INSERT INTO `type` (`borrowertype`) VALUES
 ('Teacher'),
@@ -216,11 +147,6 @@ INSERT INTO `type` (`borrowertype`) VALUES
 ('Student'),
 ('Contruction');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
 
 CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -231,13 +157,21 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
---
--- Dumping data for table `users`
---
+
 
 INSERT INTO `users` (`username`, `password`, `firstname`, `lastname`) VALUES
-('admin', 'admin', 'john', 'smith');
+('test', 'test', 'john', 'david');
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+CREATE TABLE IF NOT EXISTS `admin` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `firstname` varchar(100) NOT NULL,
+  `lastname` varchar(100) NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+
+INSERT INTO `admin` (`username`, `password`, `firstname`, `lastname`) VALUES
+('admin', 'admin', 'robert', 'smith');
